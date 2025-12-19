@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AR Talking Human</title>
+
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin:0; overflow:hidden;">
+
+  <a-scene embedded arjs="sourceType: webcam;" vr-mode-ui="enabled:false">
+
+    <!-- 3D хүн -->
+    <a-entity
+      gltf-model="Talking.glb"
+      position="0 0 -2"
+      scale="1 1 1"
+      animation-mixer>
+    </a-entity>
+
+    <!-- Яриа -->
+    <a-sound
+      src="voice.mp3"
+      autoplay="true"
+      position="0 1.6 -2">
+    </a-sound>
+
+    <a-camera></a-camera>
+  </a-scene>
+
+</body>
+</html>
